@@ -16,7 +16,7 @@
             "roles": [
                 {
                     "name": "Developer",
-                    "color": "red-400"
+                    "color": "rose-400"
                 }
             ]
         },
@@ -26,7 +26,7 @@
             "roles": [
                 {
                     "name": "Developer",
-                    "color": "red-400"
+                    "color": "rose-400"
                 },
                 {
                     "name": "3D Artist",
@@ -39,9 +39,12 @@
             "avatar": "rangou.webp",
             "roles": [
                 {
-                    "name": "Autist",
-                    "color": "indigo-500",
-                    "class": "bg-indigo-500"
+                    "name": "Developer",
+                    "color": "rose-400"
+                },
+                {
+                    "name": "3D Artist",
+                    "color": "amber-500"
                 }
             ]
         },

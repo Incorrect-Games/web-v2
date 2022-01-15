@@ -33,7 +33,7 @@
 </header>
 <section>
     <div class="container">
-        <div class="mt-8 grid gap-4 xl:gap-14 md:grid-cols-3 grid-cols auto-cols-auto items-stretch">
+        <div class="mt-8 grid gap-y-12 gap-4 xl:gap-14 md:grid-cols-3 grid-cols auto-cols-auto items-stretch">
             <div class="gap-8 flex flex-col">
                 <div>
                     <span class="material-icons-outlined icon-graphic bg-indigo-400/10 text-indigo-400">group_work</span>
@@ -64,6 +64,21 @@
         </div>
     </div>
 </section>
+<section class="bg-rose-200 border-y-2 border-black">
+    <div class="container">
+        <div class="flex items-stretch">
+            <div class="flex-1">
+                <h2>Become a sponsor.</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi reprehenderit ab provident expedita dicta ipsum.</p>
+                <a class="bttn mt-6" href="http://patreon.com/incorrectgames" target="_blank" rel="noopener noreferrer">
+                    <span class="material-icons">favorite</span>
+                    Sponsor
+                </a>
+            </div>
+            <div class="flex flex-1 flex-col place-content-center justify-items-center" />
+        </div>
+    </div>
+</section>
 <section>
     <div class="container">
         <h2>Meet the team.</h2>
@@ -73,18 +88,23 @@
                 assumenda voluptas dolor autem accusamus est sapiente perferendis ea omnis minima, officia quia!
             </p>
         </div>
-        <div class="mt-10 grid grid-cols-3 grid-cols auto-cols-auto gap-12">
+        <div class="mt-10 grid md:grid-cols-2 xl:grid-cols-3 grid-cols auto-cols-auto gap-y-12 gap-x-8">
             <!-- Ugly hack for JIT dynamic colors -->
             <div class="hidden">
                 <span class="bg-indigo-500/10 text-indigo-500" />
-                <span class="bg-red-400/10 text-red-400" />
+                <span class="bg-rose-400/10 text-rose-400" />
                 <span class="bg-blue-400/10 text-blue-400" />
                 <span class="bg-amber-500/10 text-amber-500" />
             </div>
             {#each teamApi.team as person}
-                <div class="flex gap-4">
+                <div class="flex gap-4 justify-self-center text-center flex-col md:flex-row md:justify-self-start md:text-left">
                     <div>
-                        <Avatar src="/assets/images/team/{person.avatar}" size={86} alt="Avatar of {person.name}" class="relative" />
+                        <Avatar
+                            src="/assets/images/team/{person.avatar}"
+                            size={86}
+                            alt="Avatar of {person.name}"
+                            class="relative mx-auto"
+                        />
                     </div>
                     <div>
                         <h4>{person.name}</h4>
