@@ -1,0 +1,59 @@
+{
+    "team": [
+        {
+            "name": "Dahl",
+            "avatar": "dahl.webp",
+            "roles": [
+                {
+                    "name": "Marketing",
+                    "color": "blue-400"
+                }
+            ]
+        },
+        {
+            "name": "Dyrhoi",
+            "avatar": "dyrhoi.webp",
+            "roles": [
+                {
+                    "name": "Developer",
+                    "color": "red-400"
+                }
+            ]
+        },
+        {
+            "name": "Nilus",
+            "avatar": "nilusss.webp",
+            "roles": [
+                {
+                    "name": "Developer",
+                    "color": "red-400"
+                },
+                {
+                    "name": "3D Artist",
+                    "color": "amber-500"
+                }
+            ]
+        },
+        {
+            "name": "Rangou",
+            "avatar": "rangou.webp",
+            "roles": [
+                {
+                    "name": "Autist",
+                    "color": "indigo-500",
+                    "class": "bg-indigo-500"
+                }
+            ]
+        },
+        {
+            "name": "Simsimvh",
+            "avatar": "simsim.webp",
+            "roles": [
+                {
+                    "name": "3D Artist",
+                    "color": "amber-500"
+                }
+            ]
+        }
+    ]
+}
