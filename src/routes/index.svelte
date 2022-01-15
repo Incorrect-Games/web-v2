@@ -5,7 +5,7 @@
 </script>
 
 <script lang="ts">
-    import Avatar from "$lib/components/avatar.svelte";
+    import Avatar from "$lib/components/Avatar.svelte";
 </script>
 
 <svelte:head>
