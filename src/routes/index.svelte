@@ -22,10 +22,11 @@
                 <p class="max-w-sm text-lg">Walk with us while we explore uncharted territory.</p>
                 <div class="flex place-items-center gap-6">
                     <a href="/blog" class="bttn">Read our Blog</a>
-                    <a href="/team" class="flex place-items-center gap-2">
-                        Watch showreel
+
+                    <!-- <span class="flex place-items-center gap-2">
+                        Showreel coming soon!
                         <span class="material-icons-outlined text-2xl"> play_circle_outline </span>
-                    </a>
+                    </span> -->
                 </div>
             </div>
         </div>
