@@ -3,14 +3,18 @@
 </script>
 
 <nav>
-    <div class="container flex">
-        <span />
-        <ul class="flex ml-auto">
+    <div class="container flex h-[54px] place-items-center">
+        <a href="/">
+            <span class="font-title text-black font-bold text-2xl"
+                >Incorrect</span
+            >
+        </a>
+        <ul class="flex ml-auto gap-3">
             <li>
-                <a href="/blog">Blog</a>
+                <a href="/blog" class="nav-link">Blog</a>
             </li>
             <li>
-                <a href="/team">Team</a>
+                <a href="/team" class="nav-link">Team</a>
             </li>
         </ul>
     </div>
@@ -20,8 +24,4 @@
     <slot />
 </main>
 
-<footer>
-    <p>
-        visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit
-    </p>
-</footer>
+<footer />
