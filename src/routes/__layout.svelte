@@ -23,7 +23,7 @@
                 <h3>Pages</h3>
                 <ul class="flex flex-col gap-2">
                     <li>
-                        <a class="link" href="/home">Home</a>
+                        <a class="link" href="/">Home</a>
                     </li>
                     <li><a class="link" href="/blog">Blog</a></li>
                 </ul>
