@@ -21,7 +21,7 @@
             <div class="mt-8 gap-10 flex flex-col">
                 <p class="max-w-sm text-lg">Walk with us while we explore uncharted territory.</p>
                 <div class="flex place-items-center gap-6">
-                    <a href="/blog" class="bttn">Read our Blog</a>
+                    <a href="/blog/post/the-journey-awaits" class="bttn">Read blog post</a>
 
                     <!-- <span class="flex place-items-center gap-2">
                         Showreel coming soon!
