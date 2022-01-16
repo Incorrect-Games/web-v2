@@ -1,10 +1,20 @@
 <script lang="ts" context="module">
-    export async function load({ fetch }) {
-        let res = await fetch(`https://www.googleapis.com/blogger/v3/blogs/2940280955464517677/posts?key=`);
+    import { page } from "$app/stores";
+    import { get } from "svelte/store";
+
+    export async function load({ params, fetch }) {
+        let res = await fetch(`http://localhost:1337/api/posts?filters[slug][$eq]=${params.slug}`);
         if (res.ok) {
+            const data: Array<any> = (await res.json()).data;
+            if (data.length == 0) {
+                return {
+                    status: 404,
+                    error: new Error(),
+                };
+            }
             return {
                 props: {
-                    feed: await res.json(),
+                    feed: data[0],
                 },
             };
         }
@@ -15,35 +25,14 @@
     }
 </script>
 
-<script>
-    import { onMount } from "svelte";
+<script lang="ts">
+    import type { StrapiResponse } from "src/global";
+    import type { Post } from "./types";
 
-    import * as sanitizeHtml from "sanitize-html";
-    export let feed;
+    import { parse } from "marked";
 
-    const post = feed.items[0];
-
-    let sanitized = false;
-    onMount(() => {
-        console.log(post.content);
-        post.content = sanitizeHtml(post.content, {
-            allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
-        });
-        console.log(post.content);
-        sanitized = true;
-    });
+    export let feed: StrapiResponse<Post>;
 </script>
 
-{#if sanitized}
-    {@html post.content}
-{:else}
-    <div class="animate-pulse flex flex-col gap-4">
-        <div class="h-8 mb-8 bg-neutral-200 rounded-full" />
-        <div class="flex gap-4">
-            <div class="h-4 flex-1 bg-neutral-200 rounded-full" />
-            <div class="h-4 flex-1 bg-neutral-200 rounded-full" />
-        </div>
-        <div class="h-4 bg-neutral-200 rounded-full" />
-    </div>
-{/if}
-<svelte:head />
+<h1>{feed.attributes.title}</h1>
+{@html parse(feed.attributes.content)}

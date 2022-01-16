@@ -1,3 +1,7 @@
+<script lang="ts">
+    import NavLink from "./nav-link.svelte";
+</script>
+
 <nav class="bg-white/80 backdrop-blur-lg sticky top-0 mt-6">
     <div class="container flex h-[64px] place-items-center">
         <a href="/">
@@ -5,7 +9,7 @@
         </a>
         <ul class="flex ml-auto gap-3">
             <li>
-                <a href="/blog" class="nav-link">Blog</a>
+                <NavLink href="/blog">Blog</NavLink>
             </li>
         </ul>
     </div>
