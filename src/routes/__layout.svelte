@@ -14,7 +14,7 @@
         <div class="flex items-stretch justify-between gap-12 flex-wrap">
             <div class="flex flex-col">
                 <h3>Incorrect Games</h3>
-                <p>contact@incorrect.games</p>
+                <p>hello@incorrect.games</p>
                 <!-- <p class="text-sm mt-auto flex place-items-center gap-1">
                     <span class="material-icons text-xs">copyright</span>incorrect.games
                 </p> -->
