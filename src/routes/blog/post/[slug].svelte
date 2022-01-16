@@ -30,9 +30,26 @@
     import type { Post } from "./types";
 
     import { parse } from "marked";
+    import dayjs from "dayjs";
+    import relativeTime from "dayjs/plugin/relativeTime";
+
+    dayjs.extend(relativeTime);
 
     export let feed: StrapiResponse<Post>;
 </script>
 
-<h1>{feed.attributes.title}</h1>
+<div class="mb-12">
+    <h1 class="mb-0">{feed.attributes.title}</h1>
+    <span class="text-sm">
+        Posted
+        {dayjs().diff(feed.attributes.createdAt, "week") >= 1
+            ? dayjs(feed.attributes.createdAt).format("MMM DD")
+            : dayjs(feed.attributes.createdAt).fromNow()}
+        .
+    </span>
+</div>
 {@html parse(feed.attributes.content)}
+
+<svelte:head>
+    <title>{feed.attributes.title} - Incorrect Games</title>
+</svelte:head>
