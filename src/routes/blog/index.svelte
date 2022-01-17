@@ -1,13 +1,14 @@
 <script context="module" lang="ts">
     import { variables } from "$lib/api/variables";
+    import dayjs from "dayjs";
     import type { StrapiResponseArray } from "src/global";
     import { onMount } from "svelte";
-    import type { Post } from "./post/types";
+    import type { Post as PostType } from "./post/types";
 
     export async function load({ params, fetch }) {
-        let res = await fetch(`${variables.STRAPI_URL}/posts?populate=*`);
+        let res = await fetch(`${variables.STRAPI_API_URL}/posts?populate=*&sort[0]=id:desc`);
         if (res.ok) {
-            const data: Array<any> = await res.body();
+            const data: Array<any> = await res.json();
             return {
                 props: {
                     feed: data,
@@ -22,14 +23,40 @@
 </script>
 
 <script lang="ts">
-    export let feed: StrapiResponseArray<Post>;
+    import Post from "$lib/components/blog/post.svelte";
+    import { dataset_dev } from "svelte/internal";
+
+    export let feed: StrapiResponseArray<PostType>;
 
     const latestPost = feed.data.shift();
 </script>
 
-<header>
-    <div class="container">
-        <h1>{latestPost.attributes.title}</h1>
-        {latestPost.attributes.cover.data.attributes.provider}
-    </div>
-</header>
+<div class="py-4 container flex gap-2">
+    <span class="font-bold">Blog</span> <span class="separator">|</span> Updates from Incorrect.
+</div>
+<div class="container">
+    <Post post={latestPost}>
+        <h2>{latestPost.attributes.title}</h2>
+    </Post>
+</div>
+<section>
+    {#if feed.data.length > 0}
+        <div class="container grid grid-cols md:grid-cols-2 gap-24 ">
+            {#each feed.data as post}
+                <Post {post} url={post.attributes.cover.data.attributes.formats.medium.url}>
+                    <h3>{post.attributes.title}</h3>
+                </Post>
+            {/each}
+        </div>
+    {:else}
+        <div class="container text-center">
+            <span class="icon-graphic material-icons-outlined bg-red-400/10 text-red-400">loyalty</span>
+            <h3 class="mt-8 mb-2">More posts to come!</h3>
+            <p>Keep an eye out for upcoming dev logs.</p>
+        </div>
+    {/if}
+</section>
+
+<svelte:head>
+    <title>Blog - Incorrect Games</title>
+</svelte:head>

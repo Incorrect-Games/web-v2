@@ -7,8 +7,9 @@ export type Post = {
     createdAt: string,
     publishedAt: string,
     updatedAt: string,
-    tags: StrapiResponseArray<Tag>
-    cover: StrapiDataResponse<Media>
+    tags: StrapiResponseArray<Tag>,
+    cover: StrapiDataResponse<Media>,
+    description: string,
 }
 
 export type Tag = {

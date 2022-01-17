@@ -2,8 +2,7 @@
     import { variables } from "$lib/api/variables";
 
     export async function load({ params, fetch }) {
-        await new Promise((resolve) => setTimeout(resolve, 5000));
-        let res = await fetch(`${variables.STRAPI_URL}/posts?filters[slug][$eq]=${params.slug}&populate=*`);
+        let res = await fetch(`${variables.STRAPI_API_URL}/posts?filters[slug][$eq]=${params.slug}&populate=*`);
         if (res.ok) {
             const data: Array<any> = (await res.json()).data;
             if (data.length == 0) {
@@ -52,7 +51,7 @@
     <div class="mb-12">
         <h1 class="mb-0">{feed.attributes.title}</h1>
         <div class="flex justify-between mt-2 place-items-center">
-            <div class="flex flex-1">
+            <div class="flex flex-1 gap-2">
                 {#each feed.attributes.tags.data as tag}
                     <span class="badge capitalize">{tag.attributes.name}</span>
                 {/each}
