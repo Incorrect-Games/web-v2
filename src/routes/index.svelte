@@ -65,7 +65,7 @@
         </div>
     </div>
 </section>
-<section class="bg-amber-100 border-y-2 border-black">
+<section class="bg-amber-100 border-y-2 color-section border-black">
     <div class="container">
         <div class="block md:flex">
             <div class="flex-1">

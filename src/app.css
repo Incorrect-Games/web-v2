@@ -61,6 +61,10 @@
         @apply py-24 first:pt-40;
     }
 
+    .color-section {
+        @apply my-24;
+    }
+
     .link {
         @apply hover:underline;
     }
