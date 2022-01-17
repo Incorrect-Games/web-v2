@@ -6,11 +6,8 @@
 
 <script lang="ts">
     import Avatar from "$lib/components/avatar.svelte";
+    import Seo from "$lib/seo.svelte";
 </script>
-
-<svelte:head>
-    <title>Incorrect Games</title>
-</svelte:head>
 
 <header>
     <div class="container place-items-center">
@@ -118,3 +115,5 @@
         </div>
     </div>
 </section>
+
+<Seo />

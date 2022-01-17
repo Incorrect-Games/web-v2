@@ -32,6 +32,7 @@
     import dayjs from "dayjs";
     import relativeTime from "dayjs/plugin/relativeTime.js";
     import { navigating } from "$app/stores";
+    import Seo from "$lib/seo.svelte";
 
     dayjs.extend(relativeTime);
 
@@ -67,6 +68,8 @@
     {@html parse(feed.attributes.content)}
 {/if}
 
-<svelte:head>
-    <title>{feed.attributes.title} - Incorrect Games</title>
-</svelte:head>
+<Seo
+    title="Incorrect Games | Blog - {feed.attributes.title}"
+    image={feed.attributes.cover.data.attributes.url}
+    description="{feed.attributes.description} | Continue reading on Incorrect Games."
+/>

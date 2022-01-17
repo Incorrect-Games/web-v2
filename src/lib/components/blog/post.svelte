@@ -2,6 +2,8 @@
     import { variables } from "$lib/api/variables";
 
     import dayjs from "dayjs";
+    import relativeTime from "dayjs/plugin/relativeTime.js";
+    dayjs.extend(relativeTime);
 
     import type { StrapiResponse } from "src/global";
     import type { Post } from "src/routes/blog/post/types";

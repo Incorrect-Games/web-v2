@@ -25,6 +25,7 @@
 <script lang="ts">
     import Post from "$lib/components/blog/post.svelte";
     import { dataset_dev } from "svelte/internal";
+    import Seo from "$lib/seo.svelte";
 
     export let feed: StrapiResponseArray<PostType>;
 
@@ -57,6 +58,4 @@
     {/if}
 </section>
 
-<svelte:head>
-    <title>Blog - Incorrect Games</title>
-</svelte:head>
+<Seo title="Incorrect Games | Blog" />
