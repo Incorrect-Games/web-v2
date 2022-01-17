@@ -67,7 +67,7 @@
 </section>
 <section class="bg-amber-100 border-y-2 border-black">
     <div class="container">
-        <div class="flex items-stretch">
+        <div class="block md:flex">
             <div class="flex-1">
                 <h2>Become a sponsor.</h2>
                 <p>Granting us the resources to produce both quantity and quality content for everyone to enjoy.</p>
