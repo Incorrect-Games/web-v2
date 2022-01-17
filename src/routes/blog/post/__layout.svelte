@@ -32,7 +32,7 @@
             {/each}
         </ul>
     </nav>
-    <section class="container pt-36 prose prose-neutral prose-lg prose-headings:text-black prose-p:text-neutral-900">
+    <section class="container pt-32 prose prose-neutral prose-lg prose-headings:text-black prose-p:text-neutral-900">
         <slot />
     </section>
 </div>

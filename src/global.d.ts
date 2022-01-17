@@ -5,6 +5,10 @@ export type StrapiResponse<T> = {
     attributes: T
 }
 
+export type StrapiDataResponse<T> = {
+    data: StrapiResponse<T>
+}
+
 export type StrapiResponseArray<T> = {
     data: Array<StrapiResponse<T>>
 }

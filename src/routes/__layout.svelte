@@ -1,12 +1,41 @@
 <script lang="ts">
+    import { navigating } from "$app/stores";
     import NavigationMain from "$lib/components/heading/navigation-main.svelte";
     import "../app.css";
+
+    let loadTimer = 0;
+    let loadInterval = null;
+
+    navigating.subscribe((n) => {
+        if (n) {
+            clearInterval(loadInterval);
+            loadTimer == 0;
+
+            loadInterval = setInterval(() => loadTimer++, 1000);
+        } else {
+            clearInterval(loadInterval);
+            loadTimer = 0;
+        }
+    });
 </script>
 
 <NavigationMain />
 
 <main>
-    <slot />
+    {#if $navigating && loadTimer > 0}
+        <section class="pt-32 container prose">
+            <div class="animate-pulse flex flex-col gap-4">
+                <div class="h-8 mb-8 bg-neutral-200 rounded-full" />
+                <div class="flex gap-4">
+                    <div class="h-4 flex-1 bg-neutral-200 rounded-full" />
+                    <div class="h-4 flex-1 bg-neutral-200 rounded-full" />
+                </div>
+                <div class="h-4 bg-neutral-200 rounded-full" />
+            </div>
+        </section>
+    {:else}
+        <slot />
+    {/if}
 </main>
 
 <footer>
