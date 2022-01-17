@@ -13,7 +13,7 @@
 <a href="/blog/post/{post.attributes.slug}">
     <img
         class="w-full mb-4 rounded-xl"
-        src={variables.STRAPI_BASE_URL + (url || post.attributes.cover.data.attributes.url)}
+        src={url || post.attributes.cover.data.attributes.url}
         alt={post.attributes.cover.data.attributes.alternativeText}
     />
     <div class="flex gap-2 mb-8 place-items-center">
