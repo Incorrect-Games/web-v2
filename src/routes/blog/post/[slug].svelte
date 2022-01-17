@@ -71,5 +71,5 @@
 <Seo
     title="Incorrect Games | Blog - {feed.attributes.title}"
     image={feed.attributes.cover.data.attributes.url}
-    description="{feed.attributes.description} | Continue reading on Incorrect Games."
+    description={feed.attributes.description}
 />
