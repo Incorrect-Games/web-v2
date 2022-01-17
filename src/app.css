@@ -21,6 +21,9 @@
     .icon-graphic {
         @apply text-5xl rounded-3xl p-3 bg-neutral-200;
     }
+    .separator {
+        @apply text-neutral-300;
+    }
 }
 
 @layer base {
