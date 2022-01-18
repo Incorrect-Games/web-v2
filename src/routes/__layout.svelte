@@ -62,7 +62,7 @@
                 <ul class="flex flex-col gap-2">
                     <li>
                         <a
-                            class="link flex place-items-center gap-2"
+                            class="link flex place-items-center gap-2 fill-current"
                             href="https://twitter.com/incorrectgames"
                             target="_blank"
                             rel="noopener noreferrer"

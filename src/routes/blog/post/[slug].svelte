@@ -39,34 +39,23 @@
     export let feed: StrapiResponse<Post>;
 </script>
 
-{#if $navigating}
-    <div class="animate-pulse flex flex-col gap-4">
-        <div class="h-8 mb-8 bg-neutral-200 rounded-full" />
-        <div class="flex gap-4">
-            <div class="h-4 flex-1 bg-neutral-200 rounded-full" />
-            <div class="h-4 flex-1 bg-neutral-200 rounded-full" />
+<div class="mb-12">
+    <h1 class="mb-0">{feed.attributes.title}</h1>
+    <div class="flex justify-between mt-2 place-items-center">
+        <div class="flex flex-1 gap-2">
+            {#each feed.attributes.tags.data as tag}
+                <span class="badge capitalize">{tag.attributes.name}</span>
+            {/each}
         </div>
-        <div class="h-4 bg-neutral-200 rounded-full" />
+        <span class="text-sm">
+            Posted
+            {dayjs().diff(feed.attributes.createdAt, "week") >= 1
+                ? dayjs(feed.attributes.createdAt).format("MMM DD, YYYY")
+                : dayjs(feed.attributes.createdAt).fromNow()}.
+        </span>
     </div>
-{:else}
-    <div class="mb-12">
-        <h1 class="mb-0">{feed.attributes.title}</h1>
-        <div class="flex justify-between mt-2 place-items-center">
-            <div class="flex flex-1 gap-2">
-                {#each feed.attributes.tags.data as tag}
-                    <span class="badge capitalize">{tag.attributes.name}</span>
-                {/each}
-            </div>
-            <span class="text-sm">
-                Posted
-                {dayjs().diff(feed.attributes.createdAt, "week") >= 1
-                    ? dayjs(feed.attributes.createdAt).format("MMM DD, YYYY")
-                    : dayjs(feed.attributes.createdAt).fromNow()}.
-            </span>
-        </div>
-    </div>
-    {@html parse(feed.attributes.content)}
-{/if}
+</div>
+{@html parse(feed.attributes.content)}
 
 <Seo
     title="Incorrect Games | Blog - {feed.attributes.title}"

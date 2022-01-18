@@ -62,7 +62,7 @@
         </div>
     </div>
 </section>
-<section class="bg-amber-100 border-y-2 color-section border-black">
+<section class="bg-amber-100 border-y-2 color-section border-black dark:border-none dark:bg-neutral-900">
     <div class="container">
         <div class="block md:flex">
             <div class="flex-1">
