@@ -104,7 +104,7 @@
                     <div>
                         <h4>{person.name}</h4>
                         <span>Denmark</span>
-                        <div class="flex mt-4 gap-2">
+                        <div class="flex mt-4 gap-2 justify-center md:justify-start">
                             {#each person.roles as role}
                                 <span class="badge bg-{role.color}/10 text-{role.color}">{role.name}</span>
                             {/each}
