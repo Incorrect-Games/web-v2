@@ -20,10 +20,10 @@
                 <div class="flex place-items-center gap-6">
                     <a href="/blog/post/the-journey-awaits" class="bttn">Read blog post</a>
 
-                    <!-- <span class="flex place-items-center gap-2">
-                        Showreel coming soon!
-                        <span class="material-icons-outlined text-2xl"> play_circle_outline </span>
-                    </span> -->
+                    <a href="/roadmap" class="flex place-items-center gap-2 hover:underline">
+                        See road map
+                        <span class="material-icons-outlined text-2xl"> insights </span>
+                    </a>
                 </div>
             </div>
         </div>
