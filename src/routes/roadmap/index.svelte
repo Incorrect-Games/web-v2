@@ -28,7 +28,7 @@
         >
             <RoadmapCard dateS="2022-01-16T18:33:36.018Z" icon="public" color="indigo">
                 <h3>Website & Social Pressence</h3>
-                <p>Focus on launching the our company website and start building media pressence.</p>
+                <p>Focus on launching the our company website and start building media presence.</p>
             </RoadmapCard>
             <RoadmapCard dateS="2022-06-16T18:33:36.018Z" icon="emoji_events" color="amber">
                 <h3>Project B</h3>

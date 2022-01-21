@@ -46,8 +46,8 @@
                     <span class="material-icons-outlined icon-graphic bg-lime-500/10 text-lime-500">sports_esports</span>
                 </div>
                 <div>
-                    <h3>From hobbyist.</h3>
-                    <p>As gaymers, we know what makes games fun.</p>
+                    <h3>From hobbyists.</h3>
+                    <p>As gamers, we know what makes games fun.</p>
                 </div>
             </div>
             <div class="gap-8 flex flex-col">
