@@ -24,6 +24,15 @@
     .separator {
         @apply text-neutral-300;
     }
+    .roadmap-card {
+        @apply even:justify-end even:text-right flex;
+    }
+    .roadmap-card > div {
+        @apply max-w-[45%];
+    }
+    .roadmap-card > .date {
+        @apply absolute left-1/2 top-1/2 transform -translate-y-1/2 font-title;
+    }
 }
 
 @layer base {
@@ -58,7 +67,11 @@
     header,
     section,
     footer {
-        @apply py-24 first:pt-40;
+        @apply py-24 first:pt-48;
+    }
+
+    .roadmap > section {
+        @apply pt-0;
     }
 
     .color-section {
@@ -67,6 +80,14 @@
 
     .link {
         @apply hover:underline;
+    }
+
+    .absolute-center {
+        @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+    }
+
+    .absolute-center-after {
+        @apply after:absolute after:top-1/2 after:left-1/2 after:transform after:-translate-x-1/2 after:-translate-y-1/2;
     }
 }
 

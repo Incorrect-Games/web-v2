@@ -2,8 +2,32 @@ module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	safelist: [
 		{
-			pattern: /(bg|text)-(amber|rose|blue)-(400|500)/,
-		}
+			pattern: /(bg|text|via|border)-(amber|rose|blue|indigo)-(400|500)/,
+		},
+		// Regex pattern doesn't support opacity colors Sadge
+		"bg-rose-400/10",
+		"bg-rose-400/20",
+
+		"bg-amber-400/10",
+		"bg-amber-400/20",
+
+		"bg-blue-400/10",
+		"bg-blue-400/20",
+
+		"bg-indigo-400/10",
+		"bg-indigo-400/20",
+
+		"via-rose-400/10",
+		"via-rose-400/20",
+
+		"via-amber-400/10",
+		"via-amber-400/20",
+
+		"via-blue-400/10",
+		"via-blue-400/20",
+
+		"via-indigo-400/10",
+		"via-indigo-400/20",
 	],
 	theme: {
 		container: {
