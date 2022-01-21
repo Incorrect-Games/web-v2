@@ -21,7 +21,7 @@
                     <a href="/blog/post/the-journey-awaits" class="bttn">Read blog post</a>
 
                     <a href="/roadmap" class="flex place-items-center gap-2 hover:underline">
-                        See road map
+                        See roadmap
                         <span class="material-icons-outlined text-2xl"> insights </span>
                     </a>
                 </div>

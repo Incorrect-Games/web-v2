@@ -55,6 +55,7 @@
                         <a class="link" href="/">Home</a>
                     </li>
                     <li><a class="link" href="/blog">Blog</a></li>
+                    <li><a class="link" href="/roadmap">Roadmap</a></li>
                 </ul>
             </div>
             <div>
