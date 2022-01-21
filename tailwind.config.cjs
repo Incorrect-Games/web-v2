@@ -1,5 +1,10 @@
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
+	safelist: [
+		{
+			pattern: /(bg|text)-(amber|rose|blue)-(400|500)/,
+		}
+	],
 	theme: {
 		container: {
 			center:true,
