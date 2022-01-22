@@ -6,7 +6,7 @@
 <div class="roadmap">
     <header>
         <div class="container text-center relative">
-            <h2><span class="mr-4 opacity-10">01</span>Launch</h2>
+            <h2><span class="mr-4 opacity-20">01</span>Launch</h2>
         </div>
     </header>
     <section>
@@ -16,14 +16,15 @@
         grid 
         relative             
         after:w-[0]
-        after:ml[1px] 
         after:h-full 
         after:-z-10
-        absolute-center-after
+        md:absolute-center-after
         after:border-dotted
         dark:after:border-white/10
         after:border-black/10
         after:border-l-4
+        absolute-center-after
+        after:left-10
     "
         >
             <RoadmapCard dateS="2022-01-16T18:33:36.018Z" icon="public" color="indigo">
@@ -38,7 +39,7 @@
     </section>
     <section class="pt-0">
         <div class="container text-center relative">
-            <h2><span class="mr-4 opacity-10">02</span>Game Development</h2>
+            <h2><span class="mr-4 opacity-20">02</span>Game Development</h2>
         </div>
         <div class="container pt-12 text-center">
             <span class="icon-graphic material-icons-outlined bg-red-400/10 text-red-400">insights</span>
