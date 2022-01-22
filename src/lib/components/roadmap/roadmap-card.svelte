@@ -71,7 +71,7 @@
     </div>
 
     <div class="w-full group-even:text-right">
-        <span class="font-bold text-white">{date.format("MMM YYYY")}</span>
+        <span class="font-bold dark:text-white">{date.format("MMM YYYY")}</span>
     </div>
 </article>
 
@@ -120,7 +120,7 @@
             </span>
         </div>
         <div class="w-full text-left py-6">
-            <span class="font-bold text-white">{date.format("MMM YYYY")}</span>
+            <span class="font-bold dark:text-white">{date.format("MMM YYYY")}</span>
         </div>
         <div class="flex-1 group-odd:ml-auto group-even:mr-auto">
             <slot />
