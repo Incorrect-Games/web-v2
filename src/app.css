@@ -67,7 +67,7 @@
     header,
     section,
     footer {
-        @apply py-24 first:pt-48;
+        @apply py-16 first:pt-32 md:py-24 md:first:pt-48;
     }
 
     .roadmap > section {
