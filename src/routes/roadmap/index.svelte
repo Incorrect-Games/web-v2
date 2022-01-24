@@ -49,4 +49,4 @@
     </section>
 </div>
 
-<Seo title="Incorrect Games | Roadmap" />
+<Seo title="Incorrect Games | Roadmap" description="Stay up to date with Incorrect Games' passed, in progress and upcoming milestones." />

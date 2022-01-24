@@ -1,7 +1,8 @@
 <script lang="ts">
     import { assets } from "$app/paths";
     export let title: string = "Incorrect Games | The Journey Awaits";
-    export let description: string = "Stay up to date with Incorrect Games progress and their upcoming projects.";
+    export let description: string =
+        "Incorrect Games is a Danish indie game studio where a group of friends explore their ingenious ideas together.";
     export let image: string = `${assets}/assets/images/og/og-image.png`;
 </script>
 

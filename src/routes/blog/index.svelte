@@ -58,4 +58,7 @@
     {/if}
 </section>
 
-<Seo title="Incorrect Games | Blog" />
+<Seo
+    title="Incorrect Games | Blog"
+    description="Stay up to date wtih our latest blog posts regarding Incorrect Games' growth and game development."
+/>
