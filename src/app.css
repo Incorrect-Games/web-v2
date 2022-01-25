@@ -13,7 +13,10 @@
         @apply font-bold dark:text-white;
     }
     .bttn {
-        @apply bg-black rounded-lg px-5 py-2.5 text-white inline-flex place-items-center gap-2 font-bold transition-all hover:-translate-y-1 dark:bg-white dark:text-black;
+        @apply bg-black rounded-lg px-5 h-12 text-white inline-flex place-items-center gap-2 font-bold transition-all hover:-translate-y-1 dark:bg-white dark:text-black;
+    }
+    .bttn-alt {
+        @apply bttn bg-transparent text-inherit border border-black dark:border-white border-opacity-20 dark:border-opacity-20 hover:translate-y-0 hover:border-opacity-100;
     }
     .badge {
         @apply rounded-full px-3 py-1 flex place-items-center bg-neutral-200 text-xs font-bold relative dark:bg-neutral-200/10;

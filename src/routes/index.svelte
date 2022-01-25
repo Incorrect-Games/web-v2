@@ -20,7 +20,7 @@
                 <div class="flex place-items-center gap-6">
                     <a href="/blog/post/the-journey-awaits" class="bttn">Read blog post</a>
 
-                    <a href="/roadmap" class="flex place-items-center gap-2 hover:underline">
+                    <a href="/roadmap" class="bttn-alt">
                         See roadmap
                         <span class="material-icons-outlined text-2xl"> insights </span>
                     </a>
@@ -62,7 +62,7 @@
         </div>
     </div>
 </section>
-<section class="bg-amber-100 border-y-2 color-section border-black dark:border-none dark:bg-neutral-900">
+<section class="bg-pink-200 color-section dark:bg-neutral-900">
     <div class="container">
         <div class="block md:flex">
             <div class="flex-1">
