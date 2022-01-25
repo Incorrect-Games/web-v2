@@ -23,8 +23,8 @@
 </script>
 
 <script lang="ts">
+    import { getMediaUrl } from "$lib/api/variables";
     import Post from "$lib/components/blog/post.svelte";
-    import { dataset_dev } from "svelte/internal";
     import Seo from "$lib/seo.svelte";
 
     export let feed: StrapiResponseArray<PostType>;
@@ -37,14 +37,14 @@
 </div>
 <div class="container">
     <Post post={latestPost}>
-        <h2>{latestPost.attributes.title}</h2>
+        <h2 class="text-2xl md:text-3xl">{latestPost.attributes.title}</h2>
     </Post>
 </div>
 <section>
     {#if feed.data.length > 0}
         <div class="container grid grid-cols md:grid-cols-2 gap-24 ">
             {#each feed.data as post}
-                <Post {post} url={post.attributes.cover.data.attributes.formats.medium.url}>
+                <Post {post} url={getMediaUrl(post.attributes.cover.data.attributes.formats.medium.url)}>
                     <h3>{post.attributes.title}</h3>
                 </Post>
             {/each}

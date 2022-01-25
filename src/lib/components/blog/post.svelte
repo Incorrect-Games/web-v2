@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { variables } from "$lib/api/variables";
+    import { getMediaUrl, variables } from "$lib/api/variables";
 
     import dayjs from "dayjs";
     import relativeTime from "dayjs/plugin/relativeTime.js";
@@ -15,7 +15,7 @@
 <a href="/blog/post/{post.attributes.slug}">
     <img
         class="w-full mb-4 rounded-xl"
-        src={url || post.attributes.cover.data.attributes.url}
+        src={getMediaUrl(url || post.attributes.cover.data.attributes.url)}
         alt={post.attributes.cover.data.attributes.alternativeText}
     />
     <div class="flex gap-2 mb-8 place-items-center">
