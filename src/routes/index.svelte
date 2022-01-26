@@ -17,7 +17,7 @@
             </h1>
             <div class="mt-8 gap-10 flex flex-col">
                 <p class="max-w-sm text-lg">Walk with us while we explore uncharted territory.</p>
-                <div class="flex place-items-center gap-6">
+                <div class="flex place-items-center gap-6 flex-wrap place-content-center sm:place-content-start">
                     <a href="/blog/post/the-journey-awaits" class="bttn">Read blog post</a>
 
                     <a href="/roadmap" class="bttn-alt">
