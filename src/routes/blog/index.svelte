@@ -22,8 +22,6 @@
 
     export let feed: StrapiResponseArray<PostType>;
 
-    console.log(feed);
-
     const latestPost = feed.data.shift();
 </script>
 
