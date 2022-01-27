@@ -1,24 +1,17 @@
 <script context="module" lang="ts">
-    import { variables } from "$lib/api/variables";
-    import dayjs from "dayjs";
     import type { StrapiResponseArray } from "src/global";
-    import { onMount } from "svelte";
     import type { Post as PostType } from "./post/types";
 
     export async function load({ params, fetch }) {
-        let res = await fetch(`${variables.STRAPI_API_URL}/posts?populate=*&sort[0]=id:desc`);
+        const res = await fetch("/api/blog.json");
         if (res.ok) {
-            const data: Array<any> = await res.json();
+            const data = await res.json();
             return {
                 props: {
                     feed: data,
                 },
             };
         }
-        return {
-            status: res.status,
-            error: new Error(),
-        };
     }
 </script>
 
@@ -28,6 +21,8 @@
     import Seo from "$lib/seo.svelte";
 
     export let feed: StrapiResponseArray<PostType>;
+
+    console.log(feed);
 
     const latestPost = feed.data.shift();
 </script>

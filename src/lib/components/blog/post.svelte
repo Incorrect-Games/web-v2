@@ -12,7 +12,7 @@
     export let url: string = null;
 </script>
 
-<a href="/blog/post/{post.attributes.slug}">
+<a sveltekit:prefetch href="/blog/post/{post.attributes.slug}">
     <img
         class="w-full mb-4 rounded-xl"
         src={getMediaUrl(url || post.attributes.cover.data.attributes.url)}
