@@ -11,8 +11,8 @@
 
 <header>
     <div class="container place-items-center">
-        <div class="flex flex-col">
-            <h1 class="max-w-lg">
+        <div class="flex flex-col place-items-center sm:place-items-start text-center sm:text-left">
+            <h1 class="max-w-lg ">
                 The journey <span class="decoration-lime-400 underline">awaits</span>.
             </h1>
             <div class="mt-8 gap-10 flex flex-col">
