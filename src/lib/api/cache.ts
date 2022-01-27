@@ -11,6 +11,7 @@ export async function get(key: string) {
 
 export async function setOrGet(key: string, callback: Function, ttl: number = cache_default_ttl) {
     if(cache.get(key)) {
+        console.log("using cache")
         cache.ttl(key, cache.getTtl(key) + ttl)
         return cache.get(key)
     }
