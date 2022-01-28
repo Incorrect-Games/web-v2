@@ -13,7 +13,7 @@
     <div class="container place-items-center">
         <div class="flex flex-col place-items-center sm:place-items-start text-center sm:text-left">
             <h1 class="max-w-lg ">
-                The journey <span class="decoration-lime-400 underline">awaits</span>.
+                The journey <span class="decoration-emerald-400 underline">awaits</span>.
             </h1>
             <div class="mt-8 gap-10 flex flex-col">
                 <p class="max-w-sm text-lg">Walk with us while we explore uncharted territory.</p>
@@ -37,25 +37,25 @@
                     <span class="material-icons-outlined icon-graphic bg-indigo-400/10 text-indigo-400">group_work</span>
                 </div>
                 <div>
-                    <h3>Independent work.</h3>
-                    <p>We're free to create and publish what we want.</p>
+                    <h3>Independent</h3>
+                    <p>Staying independent allows us to explore and materialize any ideas we want.</p>
                 </div>
             </div>
             <div class="gap-8 flex flex-col">
                 <div>
-                    <span class="material-icons-outlined icon-graphic bg-lime-500/10 text-lime-500">sports_esports</span>
+                    <span class="material-icons-outlined icon-graphic bg-emerald-500/10 text-emerald-500">sports_esports</span>
                 </div>
                 <div>
-                    <h3>From hobbyists.</h3>
-                    <p>As gamers, we know what makes games fun.</p>
+                    <h3>Own demographic</h3>
+                    <p>We build games that are fun for us.</p>
                 </div>
             </div>
             <div class="gap-8 flex flex-col">
                 <div>
-                    <span class="material-icons-outlined icon-graphic bg-pink-400/10 text-pink-400">opacity</span>
+                    <span class="material-icons-outlined icon-graphic bg-fuchsia-500/10 text-fuchsia-400">opacity</span>
                 </div>
                 <div>
-                    <h3>Full transparency.</h3>
+                    <h3>Transparency</h3>
                     <p>Sincerity, honesty and transparency are values that represent the core of Incorrect Games.</p>
                 </div>
             </div>
