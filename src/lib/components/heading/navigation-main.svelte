@@ -10,7 +10,7 @@
         <ul class="flex ml-auto gap-3">
             <li>
                 <NavLink href="/roadmap">Roadmap</NavLink>
-                <NavLink href="/blog">Blog</NavLink>
+                <NavLink sveltekit:prefetch href="/blog">Blog</NavLink>
             </li>
         </ul>
     </div>
