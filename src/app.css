@@ -39,6 +39,10 @@
 }
 
 @layer base {
+    html {
+        @apply text-[17px] md:text-[18px];
+    }
+
     body {
         @apply font-body text-base text-neutral-900 dark:bg-[#060606] dark:text-neutral-300;
     }
@@ -78,7 +82,7 @@
     }
 
     .color-section {
-        @apply my-24;
+        @apply py-16 md:my-24;
     }
 
     .link {
@@ -92,8 +96,4 @@
     .absolute-center-after {
         @apply after:absolute after:top-1/2 after:left-1/2 after:transform after:-translate-x-1/2 after:-translate-y-1/2;
     }
-}
-
-html {
-    font-size: 18px;
 }
