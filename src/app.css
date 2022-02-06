@@ -82,7 +82,7 @@
     }
 
     .color-section {
-        @apply py-16 md:my-24;
+        @apply py-16 md:py-24 md:my-24;
     }
 
     .link {
